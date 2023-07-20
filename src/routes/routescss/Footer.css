@@ -1,0 +1,26 @@
+
+.Footer{
+    background-image: url(../img/footer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    min-height:30vh;
+    padding: 20px 10px;
+    color: #BFC8D8;
+    text-align: center;
+    border-top: 2px solid white;
+    
+    font-family: Roboto, Verdana;
+    font-size: 15px;
+}
+
+.Footer>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Footer>div>p:first-child{
+    font-weight: bold;
+}
