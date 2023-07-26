@@ -13,13 +13,13 @@ export default function Menu(){
   return(
     <nav className="shadow">
       <ul>
-        <li>
+        <li className="imonster">
           <Link to={"/"}>Inicio</Link>
         </li>
-        <li>
+        <li className="imonster">
           <Link to={"/Nosotros"}>Nosotros</Link>
         </li>
-        <li>
+        <li className="imonster">
           <Link to={"/Experencias"}>Experencias</Link>
         </li>
       </ul>

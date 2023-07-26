@@ -1,4 +1,6 @@
 
+
+
 nav{
     overflow: visible;
     position:fixed;
@@ -35,7 +37,9 @@ ul>li{
 
 li>a{
     text-decoration: none;
-    font-family: Roboto;
+    font-family:'Creepster', cursive;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 nav>ul>li:hover{

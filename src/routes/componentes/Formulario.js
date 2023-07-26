@@ -3,9 +3,55 @@ import {CgCloseO} from 'react-icons/cg';
 import {BsFillBuildingFill} from 'react-icons/bs';
 import {BiUserCircle,BiArrowBack} from 'react-icons/bi';
 import '../estilos-de-componente/Formulario.css';
+import { useState } from 'react';
 
 
 const Formulario = ( props ) => {
+
+  //Variables que almacenan los datos del formulario
+
+  const [formdatos, setFormdatos] = useState({
+    nit:"",
+    nombre:"",
+    correo:"",
+    telefono:"",
+    cantidad:"",
+    fecha:"",
+  }) ;
+
+
+  //Función que ante cualquier cambio de letra actualiza su valor
+
+  
+  const{nit , nombre , correo , telefono , cantidad , fecha} = formdatos;
+  
+  const cambioValor = (e) =>{
+    setFormdatos({
+      ...formdatos,
+      [e.target.name] : e.target.value,
+    });
+  }
+
+  
+  //Enviar datos a la bd
+  const enviardatos=( e ) => {
+    e.preventDefault();
+    console.log("Formulario Enviado",formdatos);
+
+    alert('Se han registrado exitosamente sus datos');
+
+    setFormdatos({
+      nit:"",
+      nombre:"",
+      correo:"",
+      telefono:"",
+      cantidad:"",
+      fecha:"",
+
+    })
+
+    
+  }
 
   //Constantes para evaluar el estado del formulario Principal
   const visible = props.visible;
@@ -75,35 +121,40 @@ const Formulario = ( props ) => {
          </div>
         </div>
         <div className={formemp?'contenedor-paso2':'contenedor-paso2 oculto'}>
-         <form className='formulario'>
+         <form className='formulario' onSubmit={enviardatos}>
          <div className='header-form'>
            <h2>Formulario Empresa</h2>
            <p>Ingrese la información correspondiente</p>
           </div>
           <div className='row'>
            <div className='input-item'>
-             <label>Nombre</label>
-             <input />
+             <label>NIT</label>
+             <input name='nit' type='int' value={nit} onChange={cambioValor} />
            </div>
            <div className='input-item'>
              <label>Teléfono</label>
-             <input />
+             <input name='telefono' type='tel' value={telefono} onChange={cambioValor} />
            </div>
           </div>
           <div className='row'>
-           <div className='input-item2'>
-             <label>Correo</label>
-             <input />
+           <div className='input-item'>
+             <label>Nombre</label>
+             <input name='nombre'  type='text' value={nombre} onChange={cambioValor} />
            </div>
+           <div className='input-item'>
+             <label>Correo</label>
+             <input name='correo'  type='e-mail' value={correo} onChange={cambioValor}/>
+           </div>
+
           </div>  
           <div className='row'>
            <div className='input-item'>
              <label>Cantidad</label>
-             <input />
+             <input name='cantidad'  type='number' value={cantidad} onChange={cambioValor} />
            </div>
            <div className='input-item'>
              <label>Fecha</label>
-             <input />
+             <input name='fecha'  type='date' value={fecha} onChange={cambioValor} />
            </div>
           </div>
           <div className='contenedor-enviar'>
@@ -112,35 +163,36 @@ const Formulario = ( props ) => {
          </form>
         </div>
         <div className={formcli?'contenedor-paso2':'contenedor-paso2 oculto'}>
-         <form className='formulario'>
+         <form className='formulario' onSubmit={enviardatos}  >
           <div className='header-form'>
            <h2>Formulario Turista</h2>
            <p>Ingrese la información correspondiente</p>
           </div>
-         <div className='row'>
+          <div className='row'>
            <div className='input-item'>
              <label>Nombre</label>
-             <input />
+             <input name='nombre'  type='text' value={nombre} onChange={cambioValor} />
            </div>
            <div className='input-item'>
              <label>Teléfono</label>
-             <input />
+             <input name='telefono'  type='tel' value={telefono} onChange={cambioValor} />
            </div>
           </div>
           <div className='row'>
            <div className='input-item2'>
              <label>Correo</label>
-             <input />
+             <input name='correo'  type='e-mail' value={correo} onChange={cambioValor}/>
            </div>
+
           </div>  
           <div className='row'>
            <div className='input-item'>
              <label>Cantidad</label>
-             <input />
+             <input name='cantidad' type='number' value={cantidad} onChange={cambioValor} />
            </div>
            <div className='input-item'>
              <label>Fecha</label>
-             <input />
+             <input name='fecha'  type='date' value={fecha} onChange={cambioValor}/>
            </div>
           </div>
           <div className='contenedor-enviar'>

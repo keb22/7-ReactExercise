@@ -16,7 +16,8 @@ Adicional de un keyframe que hará la animación del botón  */
 
 .reserva{
     transition: all ease-out 0.2s;
-   
+    font-family: 'Creepster', cursive;
+    font-weight: bolder;
     text-align: center;
     letter-spacing: 1px;
     height:60px;
