@@ -1,7 +1,0 @@
-*{
-    cursor: url(../img/huella.png), auto;
-}
-
-a:hover,button:hover{
-    cursor: url(../img/huella_dino3.png), auto;
-}

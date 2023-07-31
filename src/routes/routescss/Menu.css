@@ -2,12 +2,12 @@
 
 
 nav{
-    overflow: visible;
+   
     position:fixed;
     top:0;
     display: flex;
     flex-direction:row;
-    align-items: center;
+    
     height: 15vh;
     width: 100%;
     padding: 5px 5px;
@@ -17,33 +17,42 @@ nav{
 }
 
 ul{
-    width: 30%;
+    width: 40%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     list-style: none;
     text-decoration: none;
-    gap:15px;
+
 }
 
 ul>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 7px 7px;
     border-radius: 5px;
-    background-color: aliceblue;
-    width:auto;
+    background-image: url(../img/reserva.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width:35%;
+    min-height: 60%;
     text-align: center;
 }
 
 li>a{
     text-decoration: none;
+    color: black;
     font-family:'Creepster', cursive;
     letter-spacing: 1px;
     font-weight: bold;
 }
 
-nav>ul>li:hover{
-    background-color: gainsboro;
+li>a:hover{
+    color: gray;
     
 }
 

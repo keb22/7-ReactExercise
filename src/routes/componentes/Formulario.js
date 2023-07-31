@@ -35,21 +35,33 @@ const Formulario = ( props ) => {
   
   //Enviar datos a la bd
   const enviardatos=( e ) => {
+
+    //Quita los efectos prederteminados de un formulario
     e.preventDefault();
-    console.log("Formulario Enviado",formdatos);
+    console.log("Formulario Enviado",nit);
 
     alert('Se han registrado exitosamente sus datos');
 
+    fetch("http://localhost/7-ReactExercise/back-end/php/?insertar=1",{
+      method:"POST",
+      body:JSON.stringify(formdatos)
+    })
+    .then(respuesta=>respuesta.json())
+    .then((datosRespuesta)=>{
+      console.log(datosRespuesta);
+    })
+    .catch(console.log());
+
+    //Limpiando el formulario
     setFormdatos({
       nit:"",
-      nombre:"",
-      correo:"",
-      telefono:"",
-      cantidad:"",
-      fecha:"",
+     nombre:"",
+     correo:"",
+     telefono:"",
+     cantidad:"",
+     fecha:"",
 
     })
-
     
   }
 

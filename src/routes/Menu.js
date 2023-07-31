@@ -24,7 +24,7 @@ export default function Menu(){
         </li>
       </ul>
       <div className="contenedor-logo">
-        <img src={Logo} alt="logo"/>
+        <img  alt="logo"/>
       </div>
       <div className="contenedor-reserva">
        <Boton onclick={setForm} form={form} />
