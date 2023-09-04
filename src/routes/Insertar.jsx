@@ -1,6 +1,6 @@
 import NavBar from "../componentes/Navbar";
 
-const Novedades = () =>{
+const Insertar = () =>{
   return(
     <div className='route'>
       <NavBar />
@@ -12,4 +12,4 @@ const Novedades = () =>{
   )
 }
 
-export default Novedades;
+export default Insertar;

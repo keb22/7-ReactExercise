@@ -75,7 +75,11 @@ svg{
     transition: all ease-in 0.02s ;
     background-color:#f07f1a;
     cursor: pointer;
-    border-left: 7px solid black;
+    border-left: 5px solid black;
+}
+
+.active{
+    border-left: 5px solid black;
 }
 
 .item:hover span {

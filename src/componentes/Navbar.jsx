@@ -11,6 +11,7 @@ import Logo from '../img/Logo-Letra.png';
 const NavBar = () =>{
   const [anchoDispositivo, setAncho] = useState(window.innerWidth);
   const [toggle, setToggle] = useState('');
+  const [active, setActive] = useState('');
 
   useEffect(() => {
     // Función para actualizar el ancho y la altura del dispositivo cuando cambia el tamaño de la ventana
@@ -32,13 +33,19 @@ const NavBar = () =>{
     width:'100px',
   }:
   {
-    width:'20%',
+    width:'20vw',
   };
   
   //Función que despliega la lista de subitems para administración
 
   function toggleIcon(){
     toggle?setToggle(''):setToggle('1');
+  }
+
+  //Función para activar el elemento seleccionado del navbar
+  function handleClick(index){
+    setActive(index);
+
   }
 
   //Arreglo Items Navbar
@@ -56,7 +63,7 @@ const NavBar = () =>{
     },
     {
       route:'/Administracion',
-      name:'Administración',
+      name:'Administrar',
       icon:<FaUserEdit />,
       subitems:[{ name:'Ver', route:'/Ver'},{ name:'Insertar', route:'/Insertar'},],
     },
@@ -76,7 +83,7 @@ const NavBar = () =>{
 
 
   return(
-    <div className='h-100 navbar bg-light rounded d-flex flex-column p-2 gap-0' style={stylebar}>      
+    <div className='h-100 navbar bg-light rounded-2 shadow-sm d-flex flex-column p-2 gap-0' style={stylebar}>      
       <div className='head'>
       
         <a href='/'>
@@ -91,7 +98,7 @@ const NavBar = () =>{
       <div className='h-50 w-100 rounded '>
         <ul className='lista'>
         {ItemsNav.map((item)=>(
-          <div className={item.subitems?'item-toggle':'item'}>
+          <div className={item.subitems?'item-toggle':'item'} >
             {item.subitems?
             <div className='item'>
               <Link to={item.route} >
@@ -134,8 +141,10 @@ const NavBar = () =>{
         </ul>  
       </div>
       <div className='h-25 w-100 perfil d-flex flex-row p-1 justify-content-end'>
-      <hr></hr>
-       
+       <hr></hr>
+       <div className='foto'>
+
+       </div> 
       </div>
     </div>
  )

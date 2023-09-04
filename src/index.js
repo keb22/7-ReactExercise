@@ -8,6 +8,8 @@ import { RouterProvider , createBrowserRouter} from 'react-router-dom';
 import Inicio from './routes/Inicio';
 import Reportes from './routes/Reportes';
 import Administracion from './routes/Administracion';
+import Ver from './routes/Ver';
+import Insertar from './routes/Insertar';
 import Novedades from './routes/Novedades';
 import Configuracion from './routes/Configuracion';
 import Error from './routes/Error';
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
   {
     path:'/Administracion',
     element:< Administracion />
+  },
+  {
+    path:'/Ver',
+    element:< Ver />
+  },
+  {
+    path:'/Insertar',
+    element:<Insertar />
   },
   {
     path:'/Novedades',
