@@ -11,22 +11,24 @@ export default function Menu(){
   const [formemp, setFormemp] = useState('');
   const [formcli ,setFormcli] = useState('');
   return(
-    <nav className="shadow">
-      <ul>
-        <li className="imonster">
-          <Link to={"/"}>Inicio</Link>
-        </li>
-        <li className="imonster">
-          <Link to={"/Nosotros"}>Nosotros</Link>
-        </li>
-        <li className="imonster">
-          <Link to={"/Experencias"}>Experencias</Link>
-        </li>
-      </ul>
-      <div className="contenedor-logo">
-        <img  alt="logo"/>
+    <nav className="shadow d-flex justify-content-center container-fluid">
+      <div className="contenedor-items h-100">
+        <ul className="d-flex justify-content-start">
+          <li className=" shadow">
+            <Link to={"/"}>Inicio</Link>
+          </li>
+          <li className=" shadow">
+            <Link to={"/Nosotros"}>Nosotros</Link>
+          </li>
+          <li className=" shadow">
+            <Link to={"/Experencias"}>Recuerdos</Link>
+          </li>
+        </ul>
       </div>
-      <div className="contenedor-reserva">
+      <div className="contenedor-logo rounded-circle bg-dark h-100">
+        <img src={Logo} alt="LogoHuilassikPark" />
+      </div>
+      <div className="contenedor-reserva d-flex align-item-center justify-content-center h-100 p-2 ">
        <Boton onclick={setForm} form={form} />
        <Formulario onclickVisi={setForm} visible={form} onclickemp={setFormemp} formemp={formemp} onclickcli={setFormcli} formcli={formcli}/>
       </div>

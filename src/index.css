@@ -20,6 +20,11 @@ a:hover,button:hover{
     background-size: cover;
 }
 
+.imonster{
+    font-family: 'Creepster',cursive;
+    letter-spacing: 2px;
+}
+
 /*Estilos de la caja de botones para las redes sociales*/
 
 .contenedor-iconos{

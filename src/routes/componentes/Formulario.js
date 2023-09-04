@@ -38,9 +38,8 @@ const Formulario = ( props ) => {
 
     //Quita los efectos prederteminados de un formulario
     e.preventDefault();
-    console.log("Formulario Enviado",nit);
 
-    alert('Se han registrado exitosamente sus datos');
+    
 
     fetch("http://localhost/7-ReactExercise/back-end/php/?insertar=1",{
       method:"POST",
@@ -48,6 +47,7 @@ const Formulario = ( props ) => {
     })
     .then(respuesta=>respuesta.json())
     .then((datosRespuesta)=>{
+      alert('Se han registrado exitosamente sus datos');
       console.log(datosRespuesta);
     })
     .catch(console.log());

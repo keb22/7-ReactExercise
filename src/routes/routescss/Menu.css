@@ -1,4 +1,8 @@
-
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 
 
 nav{
@@ -16,9 +20,11 @@ nav{
    
 }
 
+
 ul{
-    width: 40%;
+    width: 40vw;
     height: 100%;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,9 +44,10 @@ ul>li{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    min-width:35%;
+    min-width:28%;
     min-height: 60%;
     text-align: center;
+    transition: all ease-out 0.2 ;
 }
 
 li>a{
@@ -49,23 +56,33 @@ li>a{
     font-family:'Creepster', cursive;
     letter-spacing: 1px;
     font-weight: bold;
+
 }
 
-li>a:hover{
-    color: gray;
+li:hover{
+    cursor: url(../img/huella_dino3.png), auto;
+    transition: all ease-in 0.2s;
+    height: 60px;
+    min-width:30%;
+    font-size:20px;
+    background-image: url(../img/reserva.png);
     
 }
 
 .contenedor-logo{
-
     height: 50px;
-    width:50px;
-    box-sizing: border-box;
+    width:20vh;
+    
+    
 
 }
 
 .contenedor-logo>img{
-    height: 50px;
-    width:50px;
+  width:100%;
+  height: 70px;
     
+}
+
+.contenedor-reserva{
+    width:40vw;
 }

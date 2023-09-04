@@ -11,7 +11,7 @@ const Boton = ( props ) => {
         setForm(nuevoValor);
     }
     return(
-        <button className='reserva imonster' onClick={handleClick}>Rerservar {props.onclick}</button>
+        <button className='reserva imonster shadow' onClick={handleClick}>Rerservar {props.onclick}</button>
     );
 }
 
