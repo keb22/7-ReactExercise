@@ -7,50 +7,48 @@
 
 nav{
    
-    position:fixed;
+    position:absolute;
+    z-index: 99999;
     top:0;
-    display: flex;
-    flex-direction:row;
-    
-    height: 15vh;
-    width: 100%;
-    padding: 5px 5px;
     background: rgb(240,127,26);
     background: linear-gradient(16deg, rgba(240,127,26,1) 54%, rgba(255,255,255,1) 100%);
    
 }
 
 
-ul{
-    width: 40vw;
-    height: 100%;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    list-style: none;
+
+.itemlista{
     text-decoration: none;
-
-}
-
-ul>li{
+    color: black;
+    font-family:'Creepster', cursive;
+    letter-spacing: 1px;
+    font-weight: bold;
+    height:  80px;
+    width: 170px;  
+    font-size: 20px;
+    max-width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 7px 7px;
-    border-radius: 5px;
     background-image: url(../img/reserva.png);
     background-position: center;
     background-size: contain;
+
     background-repeat: no-repeat;
-    min-width:28%;
-    min-height: 60%;
     text-align: center;
-    transition: all ease-out 0.2 ;
+    transition: all ease-out 0.3s ;
 }
 
-li>a{
+
+.itemlista:hover{
+    cursor: url(../img/huella_dino3.png), auto;
+    transition: all ease-in 0.2s;
+    transform: scale(1.1);
+    background-image: url(../img/reserva.png);
+    
+}
+
+.itemlista>a{
     text-decoration: none;
     color: black;
     font-family:'Creepster', cursive;
@@ -58,17 +56,6 @@ li>a{
     font-weight: bold;
 
 }
-
-li:hover{
-    cursor: url(../img/huella_dino3.png), auto;
-    transition: all ease-in 0.2s;
-    height: 60px;
-    min-width:30%;
-    font-size:20px;
-    background-image: url(../img/reserva.png);
-    
-}
-
 .contenedor-logo{
     height: 50px;
     width:20vh;
