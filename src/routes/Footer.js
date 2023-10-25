@@ -2,12 +2,14 @@ import './routescss/Footer.css';
 import {CgMail} from 'react-icons/cg';
 import {AiFillPhone} from 'react-icons/ai';
 import {TiLocation} from 'react-icons/ti';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 export default function Footer () {
 
   return(
-    <Row className="w-100 p-2 Footer text-light">
+
+
+    <Row className="w-100 p-2 Footer text-light bg-dark m-0 p-0">
       <Col md={4}>
       <p>Celular</p>
         <AiFillPhone className=' rounded-circle'/>

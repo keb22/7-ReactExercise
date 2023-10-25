@@ -27,12 +27,13 @@ function Recuerdos (){
      <Carousel className="mt-5 w-100 m-auto" >
       {imagenes.map((imagen,i)=>(
         <Carousel.Item interval={2000} key={i}>
-          <Card color="secondary" className="p-2 bg-light rounded-3">
+          <Card color="secondary" className="p-2 bg-light rounded-3" style={{height:'70vh'}}>
           <img 
           src={`http://localhost/12-Dashboard/src/back-end/Fotos/img/${imagen.nomImagen}`} 
           alt={imagen.descripcionImagen}
+          className="w-100 h-100"
           style={{
-            height:'60vh',
+            height:'100%',
             width:'100%',
             objectFit:'fill',
           }

@@ -9,7 +9,7 @@ import { Col, Row } from 'react-bootstrap';
 
 export default function Inicio(){
   return(
-    <div>
+    <div className='w-100'>
       
       <Barra/>
       <div className='contenedor-inicio p-2'>
@@ -33,7 +33,7 @@ export default function Inicio(){
           </Col>
           <Col md={6}>
         <div className='bg-light rounded-3 p-2 w-100 shadow-sm mb-5 mt-5'>
-        <iframe className="video  w-100" style={{height:'300px'}}  src="https://www.youtube.com/embed/a7Ot4_kj8Dg?si=x7vsG-GkRzsHBi3A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        <iframe className="video  w-100" style={{height:'300px'}}  src="https://www.youtube.com/embed/nw3RkA_4On0?si=58CUj2Ump0cizcE0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </div>
           </Col>
           <Col md={3}>
